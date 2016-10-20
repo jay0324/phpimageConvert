@@ -1,28 +1,30 @@
 Purpose: Convert image to any size with watermark
+-------------
 Usage:
-
-1. Include the class to php
-=====================================
+-------------
+#1. Include the class to php
+```
 include("class.imageConvert.php");
-=====================================
+```
 
-2. Define class
-=====================================
+#2. Define class
+```
 $image1 = new PHP_img_converter;
-=====================================
+```
 
-3. Define source image
-=====================================
+#3. Define source image
+```
 $image1->filename = 'img/test.jpg';
-=====================================
+```
 
-4. Return it to page
-=====================================
+#4. Return it to page
+```
 echo $image1->generate();
-=====================================
+```
 
 options:
-=====================================
+-------------
+```
 //define image source (string)
 $image1->filename = "";
 
@@ -116,3 +118,4 @@ $image1->textmark_angle = 0;
 //textmark color (string)
 $image1->textmark_color = 'random,random,random';
 - 'R,G,B' (default: 'random' with generate any value)
+```
