@@ -10,8 +10,8 @@ class PHP_img_converter{
 
 	//image crop and resize param
 	public $filename = "";
-	public $width = 400;
-	public $height = 400;
+	public $width = 0;
+	public $height = 0;
 	public $bg_color = '255,255,255';
 	public $method = "";
 	public $format = "";
@@ -66,6 +66,8 @@ class PHP_img_converter{
 		imagealphablending($image, true);
 		$width_orig = imagesx($image);
 		$height_orig = imagesy($image);
+		$width = ($width==0)?$width_orig:$width;
+		$height = ($height==0)?$height_orig:$height;
 		$x = 0;
 		$y = 0;
 		$x_orig = 0;
