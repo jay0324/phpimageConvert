@@ -190,7 +190,7 @@ class PHP_img_converter{
 			case 'jpg':
 			default:
 				imagecopyresampled($image_p, $image, $x, $y, $x_orig, $y_orig, $width, $height, $width_orig, $height_orig);
-				//imagefill($image_p, 0, 0, $bg);
+				imagefill($image_p, 0, 0, $bg);
 				$image_p = $this->waterMark($image_p); //apply watermark
 				$image_p = $this->textMark($image_p); //apply textmark
 				header('Content-Type: image/jpeg');
